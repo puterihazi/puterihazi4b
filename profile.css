@@ -1,0 +1,564 @@
+/* ===== =====  Poppins Google Font  ===== =====  */
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+/* ===== =====>>  Universal Selector  <<===== =====  */
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== =====>>  Body Font Size  <<===== =====  */
+html {
+  font-size: 10px;
+}
+
+/* ===== =====>> Css Variables  <<===== =====  */
+:root {
+  /* =====>>  Font Color  <<===== */
+  --f1-color: #fff;
+  --f2-color: #000;
+  --f3-color: rgba(0, 0, 0, 0.8);
+  --f4-color: rgba(0, 0, 0, 0.6);
+  --f5-color: #000;  /* Changed to new color */
+  --f6-color: #7b4d98;  /* Changed to new color */
+
+  /* =====>>  Background Color  <<===== */
+  --bg1-color: #fff;
+  --bg2-color: #000;
+  --bg3-color: #33ccff;
+  --bg4-color: #33cc33;
+  --bg5-color: #483D8B;  /* Changed to new color */
+  --bg6-color: rgba(0, 0, 0, 0.4);
+  --bg7-color: rgba(0, 0, 0, 0.2);
+  --glass-bg: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3)
+  );
+  --C-lg-bg: linear-gradient(45deg, #ff3399, #ff9933);
+
+  /* ===== =====>>  Font Size  <<===== =====  */
+  --xxxl-fs: 2.2rem;
+  --xxl-fs: 1.8rem;
+  --xl-fs: 1.6rem;
+  --l-fs: 1.4rem;
+  --m-fs: 1.2rem;
+  --s-fs: 1.1rem;
+  --xs-fs: 1rem;
+
+  /* =====>>  Margin  <<===== */
+  --m-2-5: 2.5rem;
+  --m-1-8: 1.8rem;
+  --m-1-5: 1.5rem;
+  --m-0-6: 0.6rem;
+  --m-0-5: 0.5rem;
+  --m-0-3: 0.3rem;
+
+  /* =====>>  Padding  <<===== */
+  --p-2-5: 2.5rem;
+  --p-1-5: 1.5rem;
+  --p-1-0: 1rem;
+  --p-0-8: 0.8rem;
+  --p-0-5: 0.5rem;
+  --p-0-4: 0.4rem;
+  --p-0-3: 0.3rem;
+}
+
+
+/* ===== =====>>  Body Css  <<===== =====  */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ===== =====>>  Body Main-Background Css  <<===== =====  */
+.main_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("assets/img/purplegradient.jpg");
+  background-position: center;
+  z-index: -1;
+}
+
+/* ===== =====>>  Main-Container Css  <<===== =====  */
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "header header"
+    "userProfile userDetails"
+    "education_skills timeline_about"
+    "education_skills timeline_about";
+  width: 85%;
+  height: 90vh;
+  background: var(--glass-bg);
+  padding: var(--p-1-5);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== =====>>  Container Cards Grid-Area Css Start  <<===== =====  */
+header {
+  grid-area: header;
+}
+
+.userProfile {
+  grid-area: userProfile;
+}
+
+.education_skills {
+  grid-area: education_skills;
+}
+
+.userDetails {
+  grid-area: userDetails;
+}
+
+.timeline_about {
+  grid-area: timeline_about;
+}
+
+/* ===== =====>>  Container Cards Css  <<===== =====  */
+.container .card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(3rem);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  padding: var(--p-1-5);
+}
+
+/* ===== =====>>  Container Header/Navbar Css  <<===== =====  */
+.container header {
+  padding: 0 var(--p-2-5);
+}
+
+.container header .brandLogo {
+  display: flex;
+  align-items: center;
+}
+
+.container header .brandLogo figure img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.container header .brandLogo span {
+  font-size: var(--xl-fs);
+  font-weight: 700;
+  margin-left: var(--m-0-5);
+}
+
+/* ===== =====>>  User Main-Profile Css Start  <<===== ===== */
+.container .userProfile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.container .userProfile .profile figure img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+}
+
+/* ===== =====>>  Education & Skills Css Start  <<===== ===== */
+.container .education_skills {
+  padding: var(--p-1-5);
+}
+
+.education_skills .education .heading,
+.education_skills .skills .heading {
+  position: relative;
+  font-size: var(--xs-fs);
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  margin-bottom: var(--m-1-5);
+}
+
+.education_skills .education .heading::before,
+.education_skills .skills .heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 0.1rem;
+  width: 88%;
+  background: var(--bg6-color);
+}
+
+.education_skills .education .primary,
+.education_skills .education .secondary,
+.education_skills .education .tertiary {
+  position: relative;
+}
+
+.education_skills .education .primary h1,
+.education_skills .education .secondary h1,
+.education_skills .education .tertiary h1
+{
+  font-size: var(--l-fs);
+  color: var(--f3-color);
+  margin-bottom: var(--m-0-6);
+}
+
+.education_skills .education .primary span,
+.education_skills .education .secondary span,
+.education_skills .education .tertiary span {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  font-weight: 700;
+  font-size: var(--s-fs);
+  color: var(--f5-color);
+  background: #90EE90;
+  padding: var(--p-0-4) var(--p-1-0);
+  border-radius: 0.4rem;
+}
+
+.education_skills .education .primary p,
+.education_skills .education .secondary p,
+.education_skills .education .tertiary p
+{
+  margin-bottom: var(--m-1-8);
+  font-size: var(--m-fs);
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.6rem;
+}
+
+/* =====>>  Skills Bars Css  <<===== */
+.education_skills .skills ul li {
+  position: relative;
+  font-size: var(--m-fs);
+  line-height: 1.8rem;
+  margin: var(--m-0-5);
+  color: var(--f2-color);
+  font-weight: 500;
+}
+
+.education_skills .skills ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 0.2rem;
+  background: var(--bg3-color);
+  animation: skills 8s linear infinite;
+  animation-delay: calc(-2s * var(--i));
+}
+
+@keyframes skills {
+  0% {
+    width: 50%;
+    filter: hue-rotate(180deg);
+  }
+
+  50% {
+    width: 0;
+  }
+
+  100% {
+    width: 50%;
+    filter: hue-rotate(0);
+  }
+}
+
+/* ===== =====>>  User Details Css Start  <<===== ===== */
+.userDetails {
+  position: relative;
+  padding: var(--p-1-5) var(--p-2-5);
+}
+
+.userDetails .userName h1 {
+  font-size: var(--xxxl-fs);
+}
+
+.userDetails .userName .map {
+  position: absolute;
+  top: 2.5rem;
+  left: 18.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userDetails .userName .map .ri {
+  margin-right: var(--m-0-3);
+  font-size: var(--m-fs);
+}
+
+.userDetails .userName .map span {
+  font-size: var(--s-fs);
+  color: var(--f5-color);
+  font-weight: 700;
+}
+
+.userDetails .userName p {
+  font-size: var(--m-fs);
+  font-weight: 700;
+  color: var(--f6-color);
+  margin-bottom: var(--m-1-8);
+}
+
+.userDetails .advisor {
+  position: relative;
+  margin-bottom: var(--m-1-8);
+}
+
+.userDetails .advisor .heading {
+  font-size: var(--xs-fs);
+  color: var(--f4-color);
+  text-transform: uppercase;
+  margin-bottom: var(--m-0-6);
+}
+
+.userDetails .advisor span {
+  font-size: var(--l-fs);
+  font-weight: 700;
+}
+
+.userDetails .rank .rating {
+  position: absolute;
+  top: 2.7rem;
+  left: 3.5rem;
+}
+
+.userDetails {
+  color: var(--f5-color);
+  font-size: var(--l-fs);
+}
+
+.userDetails .rank .rating .underrate {
+  color: var(--f6-color);
+}
+
+buttons
+
+
+/* ===== =====>> About Css Start  <<===== ===== */
+.timeline_about {
+  padding: var(--p-2-5);
+}
+
+.timeline_about .tabs ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--m-2-5);
+}
+
+.timeline_about .tabs ul::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--bg7-color);
+}
+
+.timeline_about .tabs ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: var(--m-2-5);
+  padding-bottom: var(--p-0-8);
+  cursor: pointer;
+}
+
+.timeline_about .tabs ul li span {
+  font-size: var(--l-fs);
+  font-weight: 500;
+}
+
+.timeline_about .tabs ul li .ri {
+  margin-right: var(--m-0-5);
+}
+
+.timeline_about .tabs ul .active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--bg5-color);
+}
+
+.timeline_about .additional_info .heading,
+.timeline_about .basic_info .heading {
+  font-size: var(--xs-fs);
+  color: var(--f4-color);
+  text-transform: uppercase;
+  margin-bottom: var(--m-1-5);
+}
+
+.timeline_about .additional_info ul,
+.timeline_about .basic_info ul {
+  margin-bottom: var(--m-1-5);
+}
+
+.timeline_about .additional_info ul li,
+.timeline_about .basic_info ul li {
+  display: flex;
+  margin: var(--m-0-5) 0;
+}
+
+.timeline_about .additional_info ul li h1,
+.timeline_about .basic_info ul li h1 {
+  font-weight: 500;
+  font-size: var(--m-fs);
+  min-width: 12rem;
+}
+
+.timeline_about .additional_info ul li span,
+.timeline_about .basic_info ul li span {
+  font-size: var(--m-fs);
+}
+
+
+
+.info-container {
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Add spacing between sections */
+    gap: 20px; /* Optional: Add gap between the sections */
+    margin-top: 20px; /* Add spacing from the top */
+}
+
+.info-container > div {
+    flex: 1; /* Allow both sections to take equal width */
+    padding: 10px; /* Optional: Add some padding */
+    border: 1px solid #ddd; /* Optional: Add a border for better visualization */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for style */
+}
+
+.wrapper .button {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover {
+  width: 200px;
+}
+.wrapper .button .icon {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  color: #000;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 40px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon {
+  background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon {
+  background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon {
+  background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon {
+  background: #333;
+}
+.wrapper .button:nth-child(5):hover .icon {
+  background: #ff0000;
+}
+.wrapper .button .icon i {
+  font-size: 25px;
+  line-height: 40px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i {
+  color: #fff;
+}
+.wrapper .button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span {
+  color: #4267B2;
+}
+.wrapper .button:nth-child(2) span {
+  color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span {
+  color: #E1306C;
+}
+.wrapper .button:nth-child(4) span {
+  color: #333;
+}
+.wrapper .button:nth-child(5) span {
+  color: #ff0000;
+}
+
+
+footer {
+  background-color: #7b4d98;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed; /* Stick the footer to the bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Make sure it stays above other content */
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ddd;
+}
+
